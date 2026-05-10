@@ -1,0 +1,6 @@
+{
+  "name": "caracali-website-vibe-coded",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Caracali site (static HTML) for Webflow and Vercel"
+}

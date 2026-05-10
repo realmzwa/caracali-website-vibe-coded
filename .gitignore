@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build / cache
+dist/
+.next/
+out/
+.cache/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.swp
+
+# Webflow / design exports (keep large zips out of git unless you want them)
+*.zip
+
+# Vercel CLI (local project link — do not commit)
+.vercel/
