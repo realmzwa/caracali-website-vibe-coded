@@ -4,7 +4,7 @@ Caracali Open AI Codex site for Webflow. Remote: [github.com/realmzwa/caracali-w
 
 ## Git and push from this folder
 
-This directory is already a checkout of [`realmzwa/caracali-website-vibe-coded`](https://github.com/realmzwa/caracali-website-vibe-coded); `origin` points at GitHub.
+This directory is already a checkout of [`realmzwa/caracali-website-vibe-coded`](https://github.com/realmzwa/caracali-website-vibe-coded). The `origin` remote uses **SSH**: `git@github.com:realmzwa/caracali-website-vibe-coded.git`.
 
 ```bash
 cd /Users/mshongwe/Documents/caracali-website-vibe-coded
@@ -19,7 +19,7 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-**Authentication.** GitHub does not accept account passwords for HTTPS. Use a [Personal Access Token](https://github.com/settings/tokens) when prompted as the password, switch the remote to SSH (`git remote set-url origin git@github.com:realmzwa/caracali-website-vibe-coded.git` with SSH keys set up), or push from Cursor’s Git UI if you are signed in there.
+**Authentication with SSH.** Add an SSH key to your GitHub account ([docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)) so `git push` works without a PAT. Test with `ssh -T git@github.com`. Alternatively you can push from Cursor’s Git panel if signed in there.
 
 ### If `/usr/bin/git` fails (`xcrun` / Xcode Command Line Tools)
 
