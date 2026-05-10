@@ -2,34 +2,39 @@
 
 Caracali Open AI Codex site for Webflow. Remote: [github.com/realmzwa/caracali-website-vibe-coded](https://github.com/realmzwa/caracali-website-vibe-coded).
 
-## Push from this folder
+## Git and push from this folder
 
-If `git` fails with an Xcode / `xcrun` error, install or repair Apple Command Line Tools (macOS): open Terminal and run `xcode-select --install`, or download “Command Line Tools for Xcode” from Apple’s developer downloads. After `git --version` works:
+This directory is already a checkout of [`realmzwa/caracali-website-vibe-coded`](https://github.com/realmzwa/caracali-website-vibe-coded); `origin` points at GitHub.
 
 ```bash
 cd /Users/mshongwe/Documents/caracali-website-vibe-coded
-git init
-git remote add origin https://github.com/realmzwa/caracali-website-vibe-coded.git
-git branch -M main
-git add .
-git commit -m "Initial commit"
+git status
 git push -u origin main
 ```
 
-SSH remote (if you use SSH keys with GitHub):
-
-```bash
-git remote add origin git@github.com:realmzwa/caracali-website-vibe-coded.git
-```
-
-Set your identity once (use your GitHub email or noreply):
+Configure your identity if Git asks:
 
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-Authentication: GitHub no longer accepts account passwords for Git; use a [Personal Access Token](https://github.com/settings/tokens) with HTTPS, or SSH keys.
+**Authentication.** GitHub does not accept account passwords for HTTPS. Use a [Personal Access Token](https://github.com/settings/tokens) when prompted as the password, switch the remote to SSH (`git remote set-url origin git@github.com:realmzwa/caracali-website-vibe-coded.git` with SSH keys set up), or push from Cursor’s Git UI if you are signed in there.
+
+### If `/usr/bin/git` fails (`xcrun` / Xcode Command Line Tools)
+
+Install tools with `xcode-select --install`, or temporarily use Git from Miniconda (already installed under `$HOME/miniconda3` on this Mac):
+
+```bash
+export PATH="$HOME/miniconda3/bin:$PATH"
+git --version
+```
+
+Add that `export PATH=...` line to `~/.zshrc` or `~/.bash_profile` if you want it in every Terminal session.
+
+### If Terminal says “could not read Username for 'https://github.com'“
+
+HTTPS needs credentials in a context that can prompt or read stored credentials—use PAT/SSH above, Cursor’s Git panel, or a credential helper.
 
 ## Local preview
 
